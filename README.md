@@ -31,8 +31,6 @@ App
 
 ![](hydration-error.png)
 
-However, when called
-
 ## To recreate
 
 Ensure RECREATE_ERROR in `vite.config.ts` is `true`
