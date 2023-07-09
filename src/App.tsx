@@ -1,17 +1,14 @@
-import { atoms, atomsFromCssUsedInSelector, atomsFromCss } from "./atoms.css";
-
-const atomsFromJs = atoms({ color: "red" });
+import { greenText, redText } from "./styles.css";
 
 export function App() {
   return (
     <main>
       {Object.entries({
-        atomsFromJs, // No Extra Class
-        atomsFromCssUsedInSelector, // Extra Class on both Server and Client
-        atomsFromCss, // Extra on Server, and not Client
+        greenText, // No Extra Class
+        redText, // Extra Class on both Server and Client
       }).map(([key, str], i) => (
         <div key={i}>
-          <span className={str}>{key}: </span>
+          <span className={str}>{key}</span>&nbsp;
           {str}
         </div>
       ))}
