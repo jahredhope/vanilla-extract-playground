@@ -5,9 +5,50 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite Vanilla Extract w/Sprinkles</title>
+    <style>
+      .root {
+        max-width: 1280px;
+        margin: 0 auto;
+        font-size: 20px;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        place-items: center;
+        min-width: 320px;
+        min-height: 100vh;
+      }
+
+      :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+
+        color-scheme: light dark;
+        color: rgba(255, 255, 255, 0.87);
+        background-color: #242424;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"><!--app-html--></div>
+    <div>
+      <h2>Server</h2>
+      <div id="orig" class="root"><!--app-html-orig--></div>
+    </div>
+    <div>
+      <h2>Client</h2>
+      <div id="root" class="root"><!--app-html--></div>
+    </div>
     <script type="module" src="/src/entry-client.tsx"></script>
   </body>
 </html>

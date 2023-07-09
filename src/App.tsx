@@ -1,21 +1,17 @@
-import { atoms } from "./atoms.css";
-import { greenFromStyles, redFromStylesWithAtoms } from "./styles.css";
-
-const blueFromAtoms = atoms({ color: "blue" });
-const redFromAtoms = atoms({ color: "red" });
-
-if (redFromAtoms == redFromStylesWithAtoms) {
-  console.log("Does match", { redFromAtoms });
-} else {
-  console.log("Doesn't match", { redFromAtoms, redFromStylesWithAtoms });
-}
+import { atoms, redFromAtomsInCss } from "./atoms.css";
+const redFromAtomsInJs = atoms({ color: "red" });
 
 export function App() {
   return (
     <main>
-      <div className={greenFromStyles}>Green - Styles</div>
-      <div className={blueFromAtoms}>Blue - Atoms</div>
-      <div className={redFromStylesWithAtoms}>Red - Atoms in Styles</div>
+      {Object.entries({
+        redFromAtomsInCss,
+        redFromAtomsInJs,
+      }).map(([key, str], i) => (
+        <div key={i} className={str}>
+          {key} - {str}
+        </div>
+      ))}
     </main>
   );
 }
