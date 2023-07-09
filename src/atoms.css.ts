@@ -1,3 +1,4 @@
+import { globalStyle } from "@vanilla-extract/css";
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 
 const properties = defineProperties({
@@ -8,4 +9,10 @@ const properties = defineProperties({
 
 export const atoms = createSprinkles(properties);
 
-export const redFromAtomsInCss = atoms({ color: "red" });
+export const atomsFromCss = atoms({ color: "red" });
+
+export const atomsFromCssUsedInSelector = atoms({ color: "red" });
+
+globalStyle(`body ${atomsFromCssUsedInSelector}`, {
+  color: "green",
+});
