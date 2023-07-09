@@ -1,6 +1,6 @@
 # Vanilla Extract with Atoms in Styles
 
-A demonstration of a difference between Server and Client classes differ when not using `emitCssInSsr: true`, using [Vite] and [Sprinkles].
+A demonstration of a difference between Server and Client classes when not using `emitCssInSsr: true`, using [Vite] and [Sprinkles].
 
 When creating a Sprinkles function inside a `css.ts` file, the resulting styles has an additional style on server-render that isn't always present on the server, resulting in a hydration error.
 
