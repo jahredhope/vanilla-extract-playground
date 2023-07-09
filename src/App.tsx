@@ -8,8 +8,9 @@ export function App() {
         redFromAtomsInCss,
         redFromAtomsInJs,
       }).map(([key, str], i) => (
-        <div key={i} className={str}>
-          {key} - {str}
+        <div key={i}>
+          <span className={str}>{key}: </span>
+          {str}
         </div>
       ))}
     </main>
