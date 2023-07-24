@@ -22,7 +22,10 @@ async function createServer() {
   // express router (express.Router()), you should use router.use
   app.use(vite.middlewares);
 
-  app.listen(5173);
+  const PORT = 5173;
+  app.listen(PORT, () => {
+    console.log(`Listening on  http://localhost:${PORT}/`);
+  });
 
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
