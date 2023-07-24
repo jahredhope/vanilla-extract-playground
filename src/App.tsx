@@ -1,12 +1,12 @@
-// import { globalStyle$ } from "@vanilla-extract/css";
+import { globalStyle$ } from "@vanilla-extract/css";
 // import { greenText, redText } from "./styles.css";
 import { xlargeText, largeText, mediumText, smallText } from "./capsize.css";
 
-// globalStyle$("body, body *", {
-//   // all: "unset",
-//   boxSizing: "border-box",
-//   // background: "green !important",
-// });
+globalStyle$("body, body *", {
+  // all: "unset",
+  boxSizing: "border-box",
+  // background: "green !important",
+});
 
 export function App() {
   return (
