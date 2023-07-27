@@ -6,6 +6,10 @@ A playground for testing Vanilla Extract with Vite SSR + Static Rendering
 
 Not emitting CSS on Server Build
 
+The [CSS](./dist/assets/index-70b88a73.css) does not include the styles from [static.css.ts](./src/static.css.ts). They are only included the render, not client.
+
+Note they still export the js class "static_blueText\_\_zmmkag0" as seen in [index.html](./dist/index.html)
+
 ## To recreate
 
 ```bash
