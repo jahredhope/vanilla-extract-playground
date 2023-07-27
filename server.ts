@@ -50,10 +50,11 @@ async function createServer() {
       // 4. render the app HTML. This assumes entry-server.js's exported
       //     `render` function calls appropriate framework SSR APIs,
       //    e.g. ReactDOMServer.renderToString()
-      const appHtml = await render(url);
+      const { appHtml, headerHtml } = await render(url);
 
       // 5. Inject the app-rendered HTML into the template.
       const html = template
+        .replace("<!--static-html-->", headerHtml)
         .replace(`<!--app-html-->`, appHtml)
         .replace(`<!--app-html-orig-->`, appHtml);
 
